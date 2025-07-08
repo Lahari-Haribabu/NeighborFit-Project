@@ -1,0 +1,44 @@
+[
+ {
+   "name": "Greenfield",
+   "safety": 8,
+   "affordability": 6,
+   "social": 7,
+   "greenSpaces": 9
+ },
+ {
+   "name": "Urban Core",
+   "safety": 5,
+   "affordability": 4,
+   "social": 9,
+   "greenSpaces": 3
+ },
+ {
+   "name": "Suburbia",
+   "safety": 9,
+   "affordability": 7,
+   "social": 5,
+   "greenSpaces": 8
+ },
+ {
+   "name": "Metro Heights",
+   "safety": 6,
+   "affordability": 5,
+   "social": 8,
+   "greenSpaces": 4
+ },
+ {
+   "name": "Parkview Estate",
+   "safety": 7,
+   "affordability": 6,
+   "social": 6,
+   "greenSpaces": 10
+ },
+ {
+   "name": "Downtown Loft",
+   "safety": 4,
+   "affordability": 3,
+   "social": 10,
+   "greenSpaces": 2
+ }
+]

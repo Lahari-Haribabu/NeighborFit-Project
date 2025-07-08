@@ -1,0 +1,135 @@
+/** === frontend/src/App.css === */
+
+/* Theme variables */
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-light: #3b82f6;
+  --card-bg: #ffffff;
+  --text-color: #1f2937;
+  --background: linear-gradient(135deg, #e0f2ff, #c7d2fe);
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --radius: 10px;
+  --transition: 0.3s ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  background: var(--background);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  --card-bg: #1e293b;
+  --text-color: #e2e8f0;
+  --background: linear-gradient(135deg, #0f172a, #1e293b);
+  --primary-color: #3b82f6;
+  --primary-dark: #1e40af;
+  background: var(--background);
+  color: var(--text-color);
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+form {
+  background: var(--card-bg);
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+form input[type=number], 
+form input[type=email], 
+form input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+form button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+form button:hover {
+  background-color: var(--primary-dark);
+}
+
+.home-container {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(4px);
+}
+
+body.dark .home-container {
+  background-color: rgba(30, 41, 59, 0.95);
+}
+
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-link {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.home-link:hover {
+  background-color: var(--primary-dark);
+}
+
+.result-list {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.result-list li {
+  background: var(--card-bg);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 16px;
+}
