@@ -1,72 +1,112 @@
-# NeighborFit 
+# NeighborFit
 
-NeighborFitis a full-stack web application that helps users find neighborhoods that best fit their lifestyle preferences — including safety, affordability, social life, and green spaces.
+**NeighborFit** is a full-stack web application that helps users find neighborhoods that best fit their lifestyle preferences — including **safety, affordability, social life, and green spaces**.
 
-# Project Structure
-NeighborFitt/
-├── server/backend/ # Node.js + Express + MongoDB API
-│ ├── models/ # Mongoose schemas (User, Preference)
-│ ├── routes/ # Auth & Matching routes
-│ └── server.js # Entry point for backend server
-├── client/frontend/ # React application
-│ ├── public/
-│ ├── src/
-│ │ ├── pages/ # React pages: Home, Login, Register, Preferences, Results
-│ │ ├── # Navbar component
-│ │ ├── App.js
-│ │ ├── index.js
-│ │ └── style/# CSS pages: App.css,Home.css,Navbar.css,Preferences.css,Results.css # Main styling with dark mode support
-├── neighborhoodData.json # Mock data for neighborhood scoring
+This project was built as part of a two-week assignment focused on **problem analysis, research, algorithmic thinking, and systems design** under real-world constraints.
 
+## 🚀 Features
 
+- User authentication with JWT
+- User lifestyle preference submission
+- Matching algorithm to recommend neighborhoods
+- Results ranked by how well they fit user preferences
+- Dark mode toggle for better UX
+- Responsive, styled UI with CSS variables
+- Full MERN stack implementation
 
-# Features
+## 🧠 Problem Solved
 
-- JWT Authentication
-- User preferences submission
-- Lifestyle-based matching algorithm
-- Results with ranked neighborhood matches
-- Dark mode toggle
-- Styled UI with CSS variables and responsive layout
-- Full MERN Stack: MongoDB, Express, React, Node.js
+Neighborhood-lifestyle matching is a complex problem due to diverse user needs, inconsistent data, and lack of accessible tools.  
+**NeighborFit** provides a systematic, data-driven approach to recommend the most suitable neighborhoods for users based on their input preferences.
 
----
+## 🗂️ Project Structure
 
-# Installation
+```
+NeighborFit/
+├── server/                # Backend: Node.js + Express + MongoDB API
+│   ├── models/            # Mongoose schemas (User, Preference)
+│   ├── routes/            # Auth & Matching routes
+│   └── server.js          # Entry point for backend server
+├── client/                # Frontend: React application
+│   ├── public/
+│   └── src/
+│       ├── pages/         # React pages: Home, Login, Register, Preferences, Results
+│       ├── components/    # Navbar and reusable components
+│       ├── App.js
+│       ├── index.js
+│       └── styles/        # CSS: App.css, Home.css, Navbar.css, Preferences.css, Results.css
+├── neighborhoodData.json  # Mock data for neighborhood scoring
+```
 
-# Backend Setup
+## 🖥️ Installation & Setup
+
+### Backend Setup
+
 ```bash
-cd backend
+cd server
 npm install
 node server.js
-http://localhost:5001
+```
 
-# Frontend Setup
-cd frontend
+Server runs at: [http://localhost:5001](http://localhost:5001)
+
+### Frontend Setup
+
+```bash
+cd client
 npm install
 npm start
-http://localhost:3000
+```
 
-# Matching Algorithm
-Each neighborhood is scored based on how closely it matches the user’s input preferences. The algorithm uses the sum of absolute differences between each preference and neighborhood attribute:
+Frontend runs at: [http://localhost:3000](http://localhost:3000)
 
+## 📊 Matching Algorithm
 
-score = |user.safety - n.safety| +
-        |user.affordability - n.affordability| +
-        |user.social - n.social| +
-        |user.greenSpaces - n.greenSpaces|
+Each neighborhood is scored based on how closely it matches the user’s preferences.
 
-Displays the top 3 neighborhood matches
+The score is calculated as:
 
-Tech Stack
-Frontend: React, React Router, Axios
+```
+score = |user.safety - n.safety| 
+      + |user.affordability - n.affordability|
+      + |user.social - n.social| 
+      + |user.greenSpaces - n.greenSpaces|
+```
 
-Backend: Node.js, Express.js
+Neighborhoods are then ranked by lowest score, and the **top 3 matches** are displayed to the user.
 
-Database: MongoDB + Mongoose
+## 🧰 Tech Stack
 
-Authentication: JWT + bcrypt
+| Layer        | Technology                   |
+| ------------ | ---------------------------- |
+| **Frontend** | React, React Router, Axios   |
+| **Backend**  | Node.js, Express.js          |
+| **Database** | MongoDB + Mongoose           |
+| **Auth**     | JWT + bcrypt                 |
+| **Styling**  | CSS Modules, Theme Variables |
 
-Styling: CSS Modules + Theme Variables
+## 📄 Documentation
 
+The repository includes documentation of:
 
+- Problem definition and hypothesis formation
+- Research methodology and findings
+- Algorithm design rationale and trade-offs
+- Data challenges and solutions
+- Testing approach and validation results
+- Analysis of limitations and proposed future improvements
+
+## 🌟 Deliverables
+
+✅ Functional full-stack application  
+✅ Matching algorithm implementation  
+✅ Data processing pipeline  
+✅ Source code with documentation  
+✅ Deployed application (link: *add your deployed link here if available*)
+
+## 📚 Reflection
+
+- Identified key gaps in existing neighborhood-finding tools.
+- Addressed real-world data inconsistencies through creative solutions.
+- Balanced trade-offs between accuracy, scalability, and project constraints.
+- Proposed ideas for improving data coverage and algorithm sophistication in the future.
